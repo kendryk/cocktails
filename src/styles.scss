@@ -5,37 +5,42 @@
   box-sizing: border-box;
 }
 
-ul{
-    list-style:none;
+ul {
+  list-style: none;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 :root {
   --font-family: "Roboto", sans-serif;
-  --primary:#1e3799;
-  --secondary:#4a69bd;
-  --accent:#eb2f06;
-  --lightgray:#ddd;
-  --text-regular:#333;
+  --primary: #1e3799;
+  --secondary: #4a69bd;
+  --accent: #eb2f06;
+  --lightgray: #ddd;
+  --text-regular: #333;
 }
 
 body {
   font-family: var(--font-family);
-  color: var(--text-regular) ;
+  color: var(--text-regular);
 }
 
+// LAYOUT
+.container {
+  max-width: 1200px;
+  display: block;
+  margin: auto;
+  padding: 20px;
+}
 
-// util (comme boostrap) mais local
-
-//  ************************ d-flex ******************* 
+//  ************************ d-flex *******************
 .d-flex {
   display: flex;
 }
@@ -48,7 +53,7 @@ body {
   flex-direction: column;
 }
 
-.flex-justify-content-center{
+.flex-justify-content-center {
   justify-content: center;
 }
 
@@ -60,7 +65,7 @@ body {
   align-items: center;
 }
 
-.flex-align-between{
+.flex-align-between {
   align-items: space-between;
 }
 
@@ -68,30 +73,88 @@ body {
   flex: 1 1 auto; //  par défault prend tout l'esapce disponible
 }
 
+.flex-50{
+  flex: 1 1 50%;
+}
 
-//  ************************ MARGIN PADDING ******************* 
+// UTIL
 
-.p-10{
+//  ************************ MARGIN PADDING *******************
+
+.p-10 {
   padding: 10px;
 }
 
-.p-20{
+.pr-10 {
+  padding-right: 10px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.p-20 {
   padding: 20px;
 }
 
-.m-10{
+.m-10 {
   margin: 10px;
 }
 
-.m-20{
+.m-20 {
   margin: 20px;
 }
 
-//  ************************ DEBUG ******************* 
-.d1{
-  border : 1px solid red ;
+.mb-20 {
+  margin-bottom: 20px;
 }
 
-.d2{
-  border : 1px solid green ;
+// ***** THEME ********************************
+.list-primary {
+  li {
+    padding: 10px 15px;
+    border: 1px solid var(--lightgray);
+    border-top: 0;
+    &:hover {
+      background-color: var(--primary);
+      color: white;
+      cursor: pointer;
+    }
+    transition: background-color 0.4s;
+  }
+  li:first-child {
+    border-top: 1px solid var(--lightgray);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
+
+.btn {
+  padding: 10px 15px;
+  background-color: white;
+  border: 0;
+  border-radius: 3px;
+  font-weight: 700;
+  cursor: pointer;
+  &-primary {
+    background-color: var(--primary);
+    color: white;
+    &:hover {
+      background-color: var(--secondary);
+      transition: background-color 0.4s;
+    }
+  }
+}
+
+//  ************************ DEBUG *******************
+.d1 {
+  border: 1px solid red;
+}
+
+.d2 {
+  border: 1px solid green;
 }
