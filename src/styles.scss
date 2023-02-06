@@ -73,7 +73,7 @@ body {
   flex: 1 1 auto; //  par défault prend tout l'esapce disponible
 }
 
-.flex-50{
+.flex-50 {
   flex: 1 1 50%;
 }
 
@@ -101,6 +101,10 @@ body {
   margin: 10px;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 .m-20 {
   margin: 20px;
 }
@@ -110,17 +114,23 @@ body {
 }
 
 // ***** THEME ********************************
-.list-primary {
+
+.list-primary-action {
   li {
-    padding: 10px 15px;
-    border: 1px solid var(--lightgray);
-    border-top: 0;
     &:hover {
       background-color: var(--primary);
       color: white;
       cursor: pointer;
     }
     transition: background-color 0.4s;
+  }
+}
+
+.list-primary {
+  li {
+    padding: 10px 15px;
+    border: 1px solid var(--lightgray);
+    border-top: 0;
   }
   li:first-child {
     border-top: 1px solid var(--lightgray);
@@ -150,6 +160,14 @@ body {
   }
 }
 
+.badge {
+  background-color: var(--secondary);
+  border-radius: 3px;
+  padding: 2px 5px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
 //  ************************ DEBUG *******************
 .d1 {
   border: 1px solid red;
