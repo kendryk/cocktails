@@ -168,6 +168,10 @@ body {
   font-size: 12px;
   font-weight: 500;
 }
+
+.active{
+  background-color: var(--secondary)
+}
 //  ************************ DEBUG *******************
 .d1 {
   border: 1px solid red;
