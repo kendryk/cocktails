@@ -7,6 +7,7 @@ import { CocktailDetailsComponent } from './cocktail-container/cocktail-details/
 import { CocktailListComponent } from './cocktail-container/cocktail-list/cocktail-list.component';
 import { CocktailContainerComponent } from './cocktail-container/cocktail-container.component';
 import { SelectedDirective } from './shared/directives/selected.directive';
+import { PanierContainerComponent } from './panier-container/panier-container.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SelectedDirective } from './shared/directives/selected.directive';
     CocktailListComponent,
     CocktailContainerComponent,
     SelectedDirective,
+    PanierContainerComponent,
   ],
   imports: [
     BrowserModule
