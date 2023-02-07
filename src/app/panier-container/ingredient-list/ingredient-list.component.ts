@@ -7,5 +7,5 @@ import { Ingredient } from 'src/app/shared/interfaces/ingredient.interface';
   styleUrls: ['./ingredient-list.component.scss'],
 })
 export class IngredientListComponent {
-  @Input() public ingredients: Ingredient[] | null = null;
+  @Input() public ingredients: Ingredient[] | null = [];
 }

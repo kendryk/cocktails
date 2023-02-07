@@ -9,13 +9,13 @@ import { PanierService } from '../shared/services/panier.service';
   styleUrls: ['./panier-container.component.scss'],
 })
 export class PanierContainerComponent implements OnInit, OnDestroy {
-  public ingredients: Ingredient[] | null = null;
-  public _subscription: Subscription = new Subscription();
+  public ingredients: Ingredient[] | null = [];
+  public subscription: Subscription = new Subscription();
 
   constructor(private panierService: PanierService) {}
 
   ngOnInit() {
-    this._subscription = this.panierService.ingredients$.subscribe(
+    this.subscription = this.panierService.ingredients$.subscribe(
       (ingredients: Ingredient[] | null) => {
         (this.ingredients = ingredients)
       }
@@ -23,6 +23,6 @@ export class PanierContainerComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this._subscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 }
