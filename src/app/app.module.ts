@@ -12,6 +12,7 @@ import { CocktailContainerComponent } from './cocktail-container/cocktail-contai
 import { SelectedDirective } from './shared/directives/selected.directive';
 import { PanierContainerComponent } from './panier-container/panier-container.component';
 import { IngredientListComponent } from './panier-container/ingredient-list/ingredient-list.component';
+import { CocktailFormComponent } from './cocktail-container/cocktail-form/cocktail-form.component';
 
 // Routes
 import { APP_ROUTES } from './app.routes';
@@ -26,6 +27,7 @@ import { APP_ROUTES } from './app.routes';
     SelectedDirective,
     PanierContainerComponent,
     IngredientListComponent,
+    CocktailFormComponent,
   ],
   imports: [BrowserModule, RouterModule.forRoot(APP_ROUTES)],
   providers: [],
