@@ -18,11 +18,28 @@ a {
   color: inherit;
 }
 
+input{
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 8px 15px;
+}
+
+hr{
+  margin: 20px 0px;
+  border-top: 1px solid #ddd;
+}
+
+button:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 :root {
   --font-family: "Roboto", sans-serif;
   --primary: #1e3799;
   --secondary: #4a69bd;
   --accent: #eb2f06;
+  --danger: #ff0000;
   --lightgray: #ddd;
   --text-regular: #333;
 }
@@ -158,6 +175,14 @@ body {
       transition: background-color 0.4s;
     }
   }
+  &-danger {
+    background-color: var(--danger);
+    color: white;
+    &:hover {
+      background-color: var(--accent);
+      transition: background-color 0.4s;
+    }
+  }
 }
 
 .badge {
@@ -170,7 +195,8 @@ body {
 }
 
 .active{
-  background-color: var(--secondary)
+  background-color: var(--secondary);
+  color:white;
 }
 //  ************************ DEBUG *******************
 .d1 {
@@ -180,3 +206,4 @@ body {
 .d2 {
   border: 1px solid green;
 }
+
