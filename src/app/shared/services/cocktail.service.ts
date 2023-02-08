@@ -49,8 +49,27 @@ export class CocktailService {
     this.selectedCocktail$.next(this.cocktails$.value[index]);
   }
 
-  public getCocktail(index: number){
-      return this.cocktails$.value[index];
+  public getCocktail(index: number) {
+    return this.cocktails$.value[index];
   }
+
+  public addCocktail(cocktail: Cocktail): void {
+    const value = this.cocktails$.value;
+    this.cocktails$.next([...value, cocktail]);
+  }
+
+  public editCocktail(editedCocktail: Cocktail): void {
+    const value = this.cocktails$.value;
+    this.cocktails$.next(
+      value.map((cocktail: Cocktail) => {
+        if (cocktail.name === editedCocktail.name) {
+          return editedCocktail;
+        }else {
+          return cocktail;
+        }
+      })
+    );
+  }
+
   constructor() {}
 }
