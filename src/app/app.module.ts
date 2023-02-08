@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Composant
 import { AppComponent } from './app.component';
@@ -16,7 +17,7 @@ import { CocktailFormComponent } from './cocktail-container/cocktail-form/cockta
 
 // Routes
 import { APP_ROUTES } from './app.routes';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './shared/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -29,8 +30,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     PanierContainerComponent,
     IngredientListComponent,
     CocktailFormComponent,
+    FilterPipe,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(APP_ROUTES), ReactiveFormsModule],
+  imports: [
+    FormsModule,
+    BrowserModule,
+    RouterModule.forRoot(APP_ROUTES),
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
